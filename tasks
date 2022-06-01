@@ -1,0 +1,69 @@
+Final project tasks
+
+1.All following test cases should be implemented with BDD or using Page Object pattern
+2.Logging and Reporting should be implemented
+3.Should be ability to run tests in 2 threads
+4.Should be ability to pass browser, browser resolution, and thread count as parameters
+5.All logical blocks on pages should be implemented as separate classes
+6.If some test cases will fail - create bug report for them
+7.Should be added README.md file with description how to run your framework
+
+Test case #1 (Subscribe with invalid email)
+
+1.Go to the https://demo.prestashop.com/
+2.On the bottom of the page check that text near the email field equals 'Get our latest news and special sales'
+3.On the bottom of the page check that text under email field contains 'You may unsubscribe at any moment. For that purpose, please find my contact info in the legal notice.'
+4.Check that all characters on 'SUBSCRIBE' button in upper case
+
+Test case #2 (Check languages)
+
+1.Go to the https://demo.prestashop.com/
+2.Check that 44 languages exists in 'Language' dropdown in the top menu
+3.Check that 'Українська' language exist in dropdown
+
+Test case #3 (Registration with valid data)
+
+1.Go to the https://demo.prestashop.com/
+2.Click on 'Sign in' button at the right corner of the page
+3.Click on 'No account? Create one here' link
+4.Fill the form with valid data
+5.Click on 'Save' button
+6.Check your name appear near cart button
+
+Test case #4 (Registration with invalid data)
+
+1.Go to the https://demo.prestashop.com/
+2.Click on 'Sign in' button at the right corner of the page
+3.Click on 'No account? Create one here' link
+4.Fill 'First name' field with 'James8'
+5.Fill the rest fields valid data
+6.Check that 'First name' highlighted in red
+7.Check that pop-up with text 'Invalid name' appear under field
+
+Test case #5 (Check categories)
+
+1.Go to the https://demo.prestashop.com/
+2.Hover mouse over 'CLOTHES'
+3.Check that 'MEN' and 'WOMEN' sub menu items appears
+4.Hover mouse over 'ACCESSORIES'
+5.Check that 'STATIONERY' and 'HOME ACCESSORIES' sub menu items appears
+
+Test case #6 (Price drop check)
+
+1.Go to the https://demo.prestashop.com/
+2.At the bottom of the page click on 'Prices drop' link
+3.Check that every product has old and new price
+4.Check that promo price for every product calculates correct
+
+Test case #7 (Sorting check)
+
+1.Go to the https://demo.prestashop.com/
+2.Click on the 'All products >' under the 'POPULAR PRODUCTS' section
+3.Sort products as 'Name, A to Z'
+4.Check that sorting is correct
+5.Sort products as 'Name, Z to A'
+6.Check that sorting is correct
+7.Sort products as 'Price, low to high'
+8.Check that sorting is correct
+9.Sort products as 'Price, high to low'
+10.Check that sorting is correct
