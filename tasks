@@ -1,13 +1,5 @@
 Final project tasks
 
-1.All following test cases should be implemented with BDD or using Page Object pattern
-2.Logging and Reporting should be implemented
-3.Should be ability to run tests in 2 threads
-4.Should be ability to pass browser, browser resolution, and thread count as parameters
-5.All logical blocks on pages should be implemented as separate classes
-6.If some test cases will fail - create bug report for them
-7.Should be added README.md file with description how to run your framework
-
 Test case #1 (Subscribe with invalid email)
 
 1.Go to the https://demo.prestashop.com/

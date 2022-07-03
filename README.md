@@ -2,7 +2,6 @@
 To run this project you need to have installed:
 * java 8
 * allure-2.17.3
-* apache-maven-4.0.0
 ------------------------------------------------------------
 
 To start testing with default params you need simply run
@@ -11,15 +10,11 @@ in the root of a cloned Final Project :
 mvn clean test
 ```
 This command will start test with this default params:
-* `suite` - testng
 * `browser` - chrome
 * `threads` - 1
 * `resolution` - full
 
 ## Available params
-
-### -Dsuite
-Here you can set testng.xml file with tests configurations. Important! Use only file name without extension!
 
 ### -Dbrowser
 Here you can set browser to run test, available browsers:
