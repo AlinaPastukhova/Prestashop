@@ -14,26 +14,3 @@ This command will start test with this default params:
 * `threads` - 1
 * `resolution` - full
 
-## Available params
-
-### -Dbrowser
-Here you can set browser to run test, available browsers:
-* `chrome`
-
-
-### -Dthreads
-Here you can set number of threads, that will be using all available cores.
-Default value is `1`
-
-### -Dresolution
-Set resolution to start test with. Full screen is used by default.
-You need to set resolution in format `{width}x{height}`
-For example: `1024x768`
-
-### For example
-mvn clean test -Dresolution=1024x768 -Dbrowser=chrome -Dthreads=1
-
-### For starting "allure" and check results
-Simply run:
-mvn allure::serve
-
