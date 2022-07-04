@@ -9,19 +9,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Utils;
 
-public class AllProductsPage extends BasePage{
+public class AllProductsPage extends BasePage {
 
-  private static final By socialTitleRadioButton = By.xpath("//button[@class='btn-unstyle select-title']");
+  private static final By socialTitleRadioButton = By.xpath(
+      "//button[@class='btn-unstyle select-title']");
   private static final By sortFromAToZButton = By.xpath("//a[contains(text(), 'Name, A to Z')]");
   private static final By sortFromZToAButton = By.xpath("//a[contains(text(), 'Name, Z to A')]");
-  private static final By sortFromLowToHighPriceButton = By.xpath("//a[contains(text(), 'Price, low to high')]");
-  private static final By sortFromHighToLowPriceButton = By.xpath("//a[contains(text(), 'Price, high to low')]");
+  private static final By sortFromLowToHighPriceButton = By.xpath(
+      "//a[contains(text(), 'Price, low to high')]");
+  private static final By sortFromHighToLowPriceButton = By.xpath(
+      "//a[contains(text(), 'Price, high to low')]");
 
   private static final By productContainer = By
       .xpath("//div[@class='thumbnail-container reviews-loaded']");
 
   @Step("Click On [Sort From A To Z] Button")
-  public AllProductsPage clickOnSortFromAToZButton(){
+  public AllProductsPage clickOnSortFromAToZButton() {
     Utils.waitUntilPresents(socialTitleRadioButton, 10);
     Utils.scrollToElement(getDriver(), socialTitleRadioButton);
     Utils.find(socialTitleRadioButton).click();
@@ -31,7 +34,7 @@ public class AllProductsPage extends BasePage{
 
   @Step("Click On [Sort From Z To A] Button")
 
-  public AllProductsPage clickOnSortFromZToAButton(){
+  public AllProductsPage clickOnSortFromZToAButton() {
     Utils.waitUntilPresents(socialTitleRadioButton, 10);
     Utils.scrollToElement(getDriver(), socialTitleRadioButton);
     Utils.find(socialTitleRadioButton).click();
@@ -40,7 +43,7 @@ public class AllProductsPage extends BasePage{
   }
 
   @Step("Click On [Sort From Low To High Price] Button")
-  public AllProductsPage clickOnSortFromLowToHighPriceButton(){
+  public AllProductsPage clickOnSortFromLowToHighPriceButton() {
     Utils.waitUntilPresents(socialTitleRadioButton, 10);
     Utils.scrollToElement(getDriver(), socialTitleRadioButton);
     Utils.find(socialTitleRadioButton).click();
@@ -49,7 +52,7 @@ public class AllProductsPage extends BasePage{
   }
 
   @Step("Click On [Sort From High To Low Price] Button")
-  public AllProductsPage clickOnSortFromHighToLowHighPriceButton(){
+  public AllProductsPage clickOnSortFromHighToLowHighPriceButton() {
     Utils.waitUntilPresents(socialTitleRadioButton, 10);
     Utils.scrollToElement(getDriver(), socialTitleRadioButton);
     Utils.find(socialTitleRadioButton).click();
@@ -71,7 +74,8 @@ public class AllProductsPage extends BasePage{
     return products;
   }
 
-  public List<ProductBlock> getSortedProductsFromAToZ(List<ProductBlock> getAllProductsFromAllProductsPage) {
+  public List<ProductBlock> getSortedProductsFromAToZ(
+      List<ProductBlock> getAllProductsFromAllProductsPage) {
     List<ProductBlock> products = new ArrayList<>(getAllProductsFromAllProductsPage);
     products.sort(new Comparator<ProductBlock>() {
       @Override
@@ -82,7 +86,8 @@ public class AllProductsPage extends BasePage{
     return products;
   }
 
-  public List<ProductBlock> getSortedProductsFromZToA(List<ProductBlock> getAllProductsFromAllProductsPage) {
+  public List<ProductBlock> getSortedProductsFromZToA(
+      List<ProductBlock> getAllProductsFromAllProductsPage) {
     List<ProductBlock> products = new ArrayList<>(getAllProductsFromAllProductsPage);
     products.sort(new Comparator<ProductBlock>() {
       @Override
@@ -93,7 +98,8 @@ public class AllProductsPage extends BasePage{
     return products;
   }
 
-  public List<ProductBlock> getSortedProductsFromLowToHighPrice(List<ProductBlock> getAllProductsFromAllProductsPage) {
+  public List<ProductBlock> getSortedProductsFromLowToHighPrice(
+      List<ProductBlock> getAllProductsFromAllProductsPage) {
     List<ProductBlock> products = new ArrayList<>(getAllProductsFromAllProductsPage);
     products.sort(new Comparator<ProductBlock>() {
       @Override
@@ -104,7 +110,8 @@ public class AllProductsPage extends BasePage{
     return products;
   }
 
-  public List<ProductBlock> getSortedProductsFromHighToLowPrice(List<ProductBlock> getAllProductsFromAllProductsPage) {
+  public List<ProductBlock> getSortedProductsFromHighToLowPrice(
+      List<ProductBlock> getAllProductsFromAllProductsPage) {
     List<ProductBlock> products = new ArrayList<>(getAllProductsFromAllProductsPage);
     products.sort(new Comparator<ProductBlock>() {
       @Override

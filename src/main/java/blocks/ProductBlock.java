@@ -37,10 +37,10 @@ public class ProductBlock {
 
     }
 
-
     try {
-      this.discount = container.findElement(By.xpath(".//li[@class='product-flag discount']")).getText();
-      this.discountAsDouble = Double.parseDouble(discount.substring(1,3));
+      this.discount = container.findElement(By.xpath(".//li[@class='product-flag discount']"))
+          .getText();
+      this.discountAsDouble = Double.parseDouble(discount.substring(1, 3));
     } catch (NoSuchElementException e) {
       this.discount = null;
     }

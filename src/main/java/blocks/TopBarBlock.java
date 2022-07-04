@@ -14,10 +14,12 @@ public class TopBarBlock {
   //Buttons
   private static final By languageButton = By.xpath("//i[@class='material-icons expand-more']");
   private static final By signInButton = By.xpath("//a[@title='Log in to your customer account']");
-  private static final By userNameButton = By.xpath("//a[@class='account']//span[@class='hidden-sm-down']");
+  private static final By userNameButton = By.xpath(
+      "//a[@class='account']//span[@class='hidden-sm-down']");
 
   //Attributes
-  private static final By languageContainer = By.xpath("//ul[@class='dropdown-menu hidden-sm-down']/li");
+  private static final By languageContainer = By.xpath(
+      "//ul[@class='dropdown-menu hidden-sm-down']/li");
 
   private static WebDriver driver;
 
@@ -42,15 +44,16 @@ public class TopBarBlock {
     }
     return languages;
   }
+
   @Step("Click On [Sign In] Button")
-  public LoginPage clickOnSignInButton(){
+  public LoginPage clickOnSignInButton() {
     Utils.waitUntilVisible(signInButton, 10);
     Utils.find(signInButton).click();
     return new LoginPage();
   }
 
   @Step("Get Text From [UserName] Button")
-  public String getTextFromUserNameButton(){
+  public String getTextFromUserNameButton() {
     Utils.waitUntilVisible(userNameButton, 10);
     return Utils.find(userNameButton).getText();
   }

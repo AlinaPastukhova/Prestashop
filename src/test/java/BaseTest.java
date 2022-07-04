@@ -1,7 +1,6 @@
 import com.github.javafaker.Faker;
 import core.EventDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;

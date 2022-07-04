@@ -14,3 +14,6 @@ This command will start test with this default params:
 * `threads` - 1
 * `resolution` - full
 
+### For starting "allure" and check results
+Simply run:
+mvn allure::serve

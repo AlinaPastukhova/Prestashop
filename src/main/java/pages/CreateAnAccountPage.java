@@ -16,7 +16,8 @@ public class CreateAnAccountPage extends BasePage {
   private static final By passwordField = By.id("field-password");
   private static final By birthdayDateField = By.id("field-birthday");
   private static final By receiveOffersCheckBox = By.xpath("//input[@name='optin']");
-  private static final By customerDataPrivacyCheckBox = By.xpath("//input[@name='customer_privacy']");
+  private static final By customerDataPrivacyCheckBox = By.xpath(
+      "//input[@name='customer_privacy']");
   private static final By signUpForOurNewsletterCheckBox = By.xpath("//input[@name='newsletter']");
   private static final By agreeToTheTermsCheckBox = By.xpath("//input[@name='psgdpr']");
   private static final By saveButton = By.xpath("//button[@data-link-action='save-customer']");
@@ -91,7 +92,8 @@ public class CreateAnAccountPage extends BasePage {
 
   public String getBorderColorFromFirstNameField() {
     Utils.waitRefreshed(firstNameField, 10);
-    return Utils.find(firstNameField).getCssValue("outline-color");  }
+    return Utils.find(firstNameField).getCssValue("outline-color");
+  }
 
   public List<String> getTextFromDangerPopUp() {
     List<String> textFromAlertDanger = new ArrayList<>();

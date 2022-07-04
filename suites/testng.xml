@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="PrestaShop Tests">
+
+  <test name="Registration Test">
+    <classes>
+      <class name="RegistrationWithValidDataTest"/>
+      <class name="RegistrationWithInvalidDataTest"/>
+    </classes>
+  </test>
+
+<!--    <test name="Check Text">-->
+<!--      <classes>-->
+<!--        <class name="CheckLanguagesTest"/>-->
+<!--        <class name="NewsLetterTest"/>-->
+<!--      </classes>-->
+<!--    </test>-->
+
+<!--  <test name="Check Page">-->
+<!--    <classes>-->
+<!--      <class name="CheckPricesTest"/>-->
+<!--      <class name="CheckSorting"/>-->
+<!--      <class name="CheckSubmenuCategoriesTest"/>-->
+<!--    </classes>-->
+<!--  </test>-->
+
+</suite>

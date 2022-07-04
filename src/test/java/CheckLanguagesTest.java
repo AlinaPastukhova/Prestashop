@@ -20,7 +20,8 @@ public class CheckLanguagesTest extends BaseTest {
     SoftAssertions softAssertions = new SoftAssertions();
 
     softAssertions.assertThat(namesOfLanguages)
-        .as("We are waiting that " + expectedCountOfLanguages + "languages exists in 'Language' dropdown")
+        .as("We are waiting that " + expectedCountOfLanguages
+            + "languages exists in 'Language' dropdown")
         .hasSize(expectedCountOfLanguages);
 
     //Check that 'Українська' language exist in dropdown
