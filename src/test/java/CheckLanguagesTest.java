@@ -24,6 +24,7 @@ public class CheckLanguagesTest extends BaseTest {
             + "languages exists in 'Language' dropdown")
         .hasSize(expectedCountOfLanguages);
 
+
     //Check that 'Українська' language exist in dropdown
 
     softAssertions.assertThat(namesOfLanguages)

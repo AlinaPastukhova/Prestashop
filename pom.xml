@@ -12,6 +12,11 @@
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
     <aspectj.version>1.8.10</aspectj.version>
+    <browser>chrome</browser>
+    <threadCount>1</threadCount>
+    <suite>testng</suite>
+    <browserWidth>1280</browserWidth>
+    <browserHeight>1024</browserHeight>
   </properties>
 
   <dependencies>
@@ -27,7 +32,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.1.2</version>
+      <version>4.3.0</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -75,6 +80,7 @@
   <build>
     <pluginManagement>
       <plugins>
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -84,9 +90,20 @@
               -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
             </argLine>
             <suiteXmlFiles>
-              <suiteXmlFile>suites/testng.xml</suiteXmlFile>
+              <suiteXmlFil>suites/${suite}.xml</suiteXmlFil>
             </suiteXmlFiles>
+
+            <parallel>tests</parallel>
+            <threadCount>${threadCount}</threadCount>
+            <systemPropertyVariables>
+              <browser>${browser}</browser>
+              <browserWidth>${browserWidth}</browserWidth>
+              <browserHeight>${browserHeight}</browserHeight>
+            </systemPropertyVariables>
+            <perCoreThreadCount>false</perCoreThreadCount>
           </configuration>
+
+
           <dependencies>
             <dependency>
               <groupId>org.aspectj</groupId>

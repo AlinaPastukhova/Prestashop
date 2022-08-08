@@ -22,7 +22,7 @@ public class CreateAnAccountPage extends BasePage {
   private static final By agreeToTheTermsCheckBox = By.xpath("//input[@name='psgdpr']");
   private static final By saveButton = By.xpath("//button[@data-link-action='save-customer']");
   private static final By dangerPopUp = By.xpath("//li[@class='alert alert-danger']");
-
+  
   @Step("Check [Social Title] Radio Button")
   public CreateAnAccountPage checkSocialTitleRadioButton() {
     Utils.waitUntilPresents(socialTitleRadioButton, 10);

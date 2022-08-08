@@ -1,27 +1,31 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
+<!--<suite name="PrestaShop Tests" parallel="tests" thread-count="3">-->
 <suite name="PrestaShop Tests">
+
+  <listeners>
+    <listener class-name="core.MyTestListener"></listener>
+  </listeners>
 
   <test name="Registration Test">
     <classes>
       <class name="RegistrationWithValidDataTest"/>
-      <class name="RegistrationWithInvalidDataTest"/>
+            <class name="RegistrationWithInvalidDataTest"/>
     </classes>
   </test>
 
-<!--    <test name="Check Text">-->
-<!--      <classes>-->
-<!--        <class name="CheckLanguagesTest"/>-->
-<!--        <class name="NewsLetterTest"/>-->
-<!--      </classes>-->
-<!--    </test>-->
+  <test name="Check Text">
+    <classes>
+      <class name="CheckLanguagesTest"/>
+              <class name="NewsLetterTest"/>
+    </classes>
+  </test>
 
-<!--  <test name="Check Page">-->
-<!--    <classes>-->
-<!--      <class name="CheckPricesTest"/>-->
-<!--      <class name="CheckSorting"/>-->
-<!--      <class name="CheckSubmenuCategoriesTest"/>-->
-<!--    </classes>-->
-<!--  </test>-->
+  <test name="Check Page">
+    <classes>
+      <class name="CheckSorting"/>
+            <class name="CheckSubmenuCategoriesTest"/>
+    </classes>
+  </test>
 
 </suite>

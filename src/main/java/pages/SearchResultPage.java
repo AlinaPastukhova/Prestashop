@@ -14,7 +14,7 @@ public class SearchResultPage extends BasePage {
       .xpath("//div[@class='thumbnail-container reviews-loaded']");
 
   @Step("Click On [SearchingProduct]")
-  public ProductPage clickOnSearchingProduct(String productName) {
+  public ProductPage clickOnSearchingProduct(String productName){
     Utils.waitUntilVisible(productContainer, 10);
     Utils.waitRefreshed(productContainer, 10);
     List<ProductBlock> products = new ArrayList<>();
@@ -24,7 +24,7 @@ public class SearchResultPage extends BasePage {
       products.add(productBlock);
     }
     for (ProductBlock product : products) {
-      if (product.getNameAsString().equals(productName)) {
+      if (product.getNameAsString().equals(productName)){
         product.getNameAsWebElement().click();
       }
     }

@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Utils;
 
-public class PricesDrop extends BasePage {
+public class PricesDrop extends BasePage{
 
   private static final By productContainer = By
       .xpath("//div[@class='thumbnail-container reviews-loaded']");
@@ -32,16 +32,14 @@ public class PricesDrop extends BasePage {
     List<Double> prices = new ArrayList<>();
     for (ProductBlock productBlock : allProducts) {
       prices.add(productBlock.getOldPriceAsDouble());
-    }
-    return prices;
+    } return prices;
   }
 
   public List<Double> getNewPricesFromProducts(List<ProductBlock> allProducts) {
     List<Double> prices = new ArrayList<>();
     for (ProductBlock productBlock : allProducts) {
       prices.add(productBlock.getActualPriceAsDouble());
-    }
-    return prices;
+    } return prices;
   }
 
   public List<Double> correctPricesFromProducts(List<ProductBlock> productsWithPrices) {
