@@ -39,6 +39,13 @@ public abstract class BasePage {
   TopBarBlock topBarBlockBlock = new TopBarBlock(getDriver());
   MainMenuBlock mainMenuBlock = new MainMenuBlock(getDriver());
 
+  public PricesDrop clickOnPricesDropButton(){
+    Utils.waitUntilPresents(pricesDropButton, 10);
+    Utils.scrollToElement(getDriver(), pricesDropButton);
+    Utils.find(pricesDropButton).click();
+    return new PricesDrop();
+  }
+
   public SearchResultPage enterSearchName(String searchName){
     Utils.waitUntilVisible(searchInput, 20);
     getDriver().findElement(searchInput).sendKeys(searchName);

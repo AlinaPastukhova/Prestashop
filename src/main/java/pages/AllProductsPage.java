@@ -27,6 +27,7 @@ public class AllProductsPage extends BasePage {
   public AllProductsPage clickOnSortFromAToZButton() {
     Utils.waitUntilPresents(socialTitleRadioButton, 10);
     Utils.scrollToElement(getDriver(), socialTitleRadioButton);
+    Utils.waitUntilPresents(socialTitleRadioButton, 10);
     Utils.find(socialTitleRadioButton).click();
     Utils.find(sortFromAToZButton).click();
     return this;

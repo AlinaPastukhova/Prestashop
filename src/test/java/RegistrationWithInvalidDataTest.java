@@ -10,7 +10,7 @@ public class RegistrationWithInvalidDataTest extends BaseTest {
   String lastName = faker.name().lastName();
   String email = faker.internet().emailAddress();
   String password = faker.internet().password();
-  String birthdayDateField = "12/02/1990";
+  String birthdayDateField = "12/01/1994";
 
   @Test(description = "Check That First Name Highlighted In Red Test" )
   public void checkThatFirstNameHighlightedInRedTest() {
