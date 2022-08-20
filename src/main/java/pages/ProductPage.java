@@ -57,11 +57,9 @@ public class ProductPage extends BasePage {
   @Step("Select [Color")
   public ProductPage selectColor(String color) {
     List<WebElement> typeOfColors = getDriver().findElements(selectColorRadioButton);
-    for (WebElement typeOfColor : typeOfColors) {
-      if (typeOfColor.getAttribute("title").equals(color)){
-        typeOfColor.click();
-      }
-    }
+    typeOfColors.stream()
+            .filter(typeOfColor -> typeOfColor.getAttribute("title").equals(color))
+            .forEach(typeOfColor -> typeOfColor.click());
     return this;
   }
 }

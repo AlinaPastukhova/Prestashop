@@ -65,9 +65,9 @@ public class Utils {
   public static List<String> getNamesFromButtons(By container){
     List<String> buttons = new ArrayList<>();
     List<WebElement> elements = driver.findElements(container);
-    for (WebElement element : elements) {
-      buttons.add(element.getText().trim());
-    }
+    elements.stream()
+            .map(element -> element.getText().trim())
+            .forEach(text -> buttons.add(text));
     return buttons;
   }
 }

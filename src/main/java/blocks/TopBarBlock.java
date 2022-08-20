@@ -36,10 +36,9 @@ public class TopBarBlock {
   public List<String> getNamesOfLanguages() {
     List<String> languages = new ArrayList<>();
     List<WebElement> elements = driver.findElements(languageContainer);
-    for (WebElement element : elements) {
-      String nameOfLanguage = element.getText();
-      languages.add(nameOfLanguage);
-    }
+    elements.stream().forEach(element -> {
+      languages.add(element.getText());
+    });
     return languages;
   }
 

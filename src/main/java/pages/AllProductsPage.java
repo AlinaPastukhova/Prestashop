@@ -68,10 +68,9 @@ public class AllProductsPage extends BasePage {
     Utils.waitRefreshed(productContainer, 20);
     List<ProductBlock> products = new ArrayList<>();
     List<WebElement> containers = getDriver().findElements(productContainer);
-    for (WebElement container : containers) {
-      ProductBlock productBlock = new ProductBlock(container);
-      products.add(productBlock);
-    }
+    containers.stream().forEach(container -> {
+      products.add(new ProductBlock(container));
+    });
     return products;
   }
 

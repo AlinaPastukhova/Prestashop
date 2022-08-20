@@ -98,9 +98,8 @@ public class CreateAnAccountPage extends BasePage {
   public List<String> getTextFromDangerPopUp() {
     List<String> textFromAlertDanger = new ArrayList<>();
     List<WebElement> elements = getDriver().findElements(dangerPopUp);
-    for (WebElement element : elements) {
-      textFromAlertDanger.add(element.getText());
-    }
+    elements.stream()
+            .forEach(element -> textFromAlertDanger.add(element.getText()));
     return textFromAlertDanger;
   }
 }

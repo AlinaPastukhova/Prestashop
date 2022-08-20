@@ -19,15 +19,13 @@ public class SearchResultPage extends BasePage {
     Utils.waitRefreshed(productContainer, 10);
     List<ProductBlock> products = new ArrayList<>();
     List<WebElement> elements = getDriver().findElements(productContainer);
-    for (WebElement element : elements) {
-      ProductBlock productBlock = new ProductBlock(element);
-      products.add(productBlock);
-    }
-    for (ProductBlock product : products) {
-      if (product.getNameAsString().equals(productName)){
-        product.getNameAsWebElement().click();
-      }
-    }
+    elements.stream()
+            .forEach(element -> {
+              products.add(new ProductBlock(element));
+            });
+    products.stream()
+            .filter(product -> product.getNameAsString().equals(productName))
+            .forEach(product -> product.getNameAsWebElement().click());
     return new ProductPage();
   }
 }
