@@ -40,14 +40,7 @@ Test case #5 (Check categories)
 4.Hover mouse over 'ACCESSORIES'
 5.Check that 'STATIONERY' and 'HOME ACCESSORIES' sub menu items appears
 
-Test case #6 (Price drop check)
-
-1.Go to the https://demo.prestashop.com/
-2.At the bottom of the page click on 'Prices drop' link
-3.Check that every product has old and new price
-4.Check that promo price for every product calculates correct
-
-Test case #7 (Sorting check)
+Test case #6 (Sorting check)
 
 1.Go to the https://demo.prestashop.com/
 2.Click on the 'All products >' under the 'POPULAR PRODUCTS' section
